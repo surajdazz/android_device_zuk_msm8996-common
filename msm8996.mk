@@ -77,6 +77,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
+# Google extra permissions and features
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/common/etc/permissions/android.hardware.camera.full.xml:system/etc/permissions/android.hardware.camera.full.xml \
+    $(LOCAL_PATH)/prebuilt/common/etc/permissions/android.hardware.camera.raw.xml:system/etc/permissions/android.hardware.camera.raw.xml \
+    $(LOCAL_PATH)/prebuilt/common/etc/permissions/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml \
+    $(LOCAL_PATH)/prebuilt/common/etc/sysconfig/google_build.xml:system/etc/sysconfig/google_build.xml \
+    $(LOCAL_PATH)/prebuilt/common/etc/sysconfig/nexus.xml:system/etc/sysconfig/nexus.xml
+
+# Haters gonna hate..
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Additional native libraries
