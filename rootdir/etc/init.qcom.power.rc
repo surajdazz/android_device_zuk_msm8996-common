@@ -127,6 +127,8 @@ on enable-low-power
     # Input boost config
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1036000 2:1324800"
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
+    write /sys/module/cpu_boost/parameters/input_boost_freq_s2 "960000 0"
+    write /sys/module/cpu_boost/parameters/input_boost_ms_s2 200
 
     # Set big.LITTLE scheduler parameters
     write /proc/sys/kernel/sched_boost 0
